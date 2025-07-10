@@ -6,7 +6,7 @@ body {
     color: #333;
 }
 
-h1 {
+h2 {
     font-family: 'Georgia', 'Times New Roman', serif;
 }
 
@@ -16,53 +16,6 @@ section {
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    animation: fadeIn 0.8s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-Oui, bien sûr. On peut tout à fait s'en passer.
-
-La déclaration :root sert à définir des variables CSS (appelées "Custom Properties"). C'est une bonne pratique sur les gros projets pour changer facilement toutes les couleurs d'un seul coup, mais ce n'est absolument pas obligatoire.
-
-Voici le même code CSS, où j'ai directement remplacé les variables par leurs valeurs. Le résultat visuel sera strictement identique.
-
-Le CSS sans :root
-CSS
-
-/* --- STYLE DE BASE --- */
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.7;
-    margin: 0;
-    background-color: #f8f9fa; /* Remplacé var(--couleur-fond) */
-    color: #333; /* Remplacé var(--couleur-texte) */
-}
-
-h1, h2, h3 {
-    font-family: 'Georgia', 'Times New Roman', serif;
-}
-
-h2 {
-    color: #005a31; /* Remplacé var(--couleur-principale) */
-    border-bottom: 3px solid #005a31; /* Remplacé var(--couleur-principale) */
-    padding-bottom: 0.5rem;
-    margin-bottom: 1.5rem;
-}
-
-h3 {
-    color: #007bff; /* Remplacé var(--couleur-secondaire) */
-}
-
-section {
-    margin-bottom: 3rem;
-    padding: 1.5rem;
-    background-color: #ffffff; /* Remplacé var(--couleur-blanc) */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Remplacé var(--ombre-boite) */
     animation: fadeIn 0.8s ease-in-out;
 }
 
@@ -81,7 +34,7 @@ section {
     border-radius: 0;
 }
 
-#ban h1 {
+#ban h2 {
     font-size: 4rem;
     margin: 0;
     animation: slideDown 1s ease-out;
