@@ -3,13 +3,6 @@
     padding: 0;
 }
 
-/* nav {
-    display: flex;
-    justify-content: space-around;
-    background-color: #41C9E2;
-    align-items: center;
-} */
-
 nav {
     width: 100%;
     margin: 0 auto;
@@ -19,12 +12,19 @@ nav {
     /* display: flex; */
     justify-content: space-around;
     background-color: #41C9E2;
-    align-items: center;
-    text-align: center;
 }
 
 nav ul {
+    width: 1600px;
     list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    font-weight: bold;
+    font-family: 'Pangolin', sans-serif;
+    font-size: large;
 }
 
 nav ul li {
@@ -36,16 +36,18 @@ nav ul li {
 
 nav ul::after {
     content: "";
-    /* display: table; */
+    display: table;
     clear: both;
 }
 
 nav a {
-    /* display: block; */
+    display: block;
     text-decoration: none;
     color: black;
     border-bottom: 2px solid transparent;
     padding: 10px 0px;
+    /* display: flex; */
+    justify-content: space-evenly;
 }
 
 nav a:hover {
@@ -68,7 +70,7 @@ nav>ul li:hover .sous {
 
 .sous li {
     float: none;
-    width: 100%;
+    width: auto;
     text-align: left;
 }
 
@@ -82,8 +84,9 @@ nav>ul li:hover .sous {
     background-color: RGBa(200, 200, 200, 0.1);
 }
 
+
 .deroulant>a::after {
-    content: " ▼";
+    content: "▼";
     font-size: 12px;
 }
 
@@ -98,4 +101,89 @@ nav>ul li:hover .sous {
     width: 40px;
     height: 40px;
     overflow: hidden;
+}
+
+.picto {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 20px;
+}
+
+
+/* Debut de la main page */
+
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+body {
+    background: linear-gradient(#41C9E2, #ACE2E1, #f7eedd);
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+h1,
+h2 {
+    text-align: center;
+    font-family: 'Pangolin', sans-serif;
+}
+
+.destination {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.deuxpays,
+.troispays {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.destination img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.overlay-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-family: 'Pangolin', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 8px;
+}
+
+.image-container:hover .overlay-effect {
+    opacity: 1;
+}
+
+.image-container:hover img {
+    transform: scale(1.05);
 }
