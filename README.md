@@ -70,7 +70,7 @@ https://baptiste-juan.github.io/Voyage/
 
 ## Contributing
 
-TODO: Guidelines for contributing (link to `CONTRIBUTING.md`):
+See [CONTRIBUTING.md](CONTRIBUTING.md), for more details about:
 
 - Behave as a team member. Jot down a first Team's Rule of Conduct
 - Clone the repository
