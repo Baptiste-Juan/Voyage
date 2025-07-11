@@ -22,7 +22,7 @@ Today we use the *GitHub Flow*.
 
 We aim to switch to using a *lightweight* version of the *Git Flow* instead for the feature, integration and release process.
 
-> [!INFO]
+> [!NOTE]
 > We made several adjustments to the original Git Flow:
 >
 > - We use `dev` instead of `develop` as the integration branch.
