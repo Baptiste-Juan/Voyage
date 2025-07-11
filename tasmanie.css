@@ -6,8 +6,15 @@ body {
     color: #333;
 }
 
-h2 {
+h1, h2 {
     font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+h2 {
+    color: #005a31;
+    border-bottom: 3px solid #005a31;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
 section {
@@ -34,7 +41,7 @@ section {
     border-radius: 0;
 }
 
-#ban h2 {
+#ban h1 {
     font-size: 4rem;
     margin: 0;
     animation: slideDown 1s ease-out;
@@ -48,4 +55,76 @@ section {
 #ban p {
     font-size: 1.5rem;
     opacity: 0.9;
+}
+
+/* --- MISE EN PAGE FLEXBOX --- */
+.conteneur-principal {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* --- TABLEAU --- */
+.table-container {
+    overflow-x: auto; 
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
+}
+thead tr {
+    background-color: #005a31;
+    color: #ffffff;
+}
+tbody tr:nth-of-type(even) {
+    background-color: #f2f2f2;
+}
+tbody tr:hover {
+    background-color: #e6f3ff;
+    transition: all 0.3s ease-in-out;
+}
+caption {
+    caption-side: bottom;
+    text-align: right;
+    font-style: italic;
+    font-size: 0.9em;
+    padding-top: 0.5rem;
+}
+
+td img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+}
+
+
+/* Cartes en bas */
+.cartes-flex {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+.carte {
+    flex: 1;
+    min-width: 200px;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+.carte:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
