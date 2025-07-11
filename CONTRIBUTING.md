@@ -22,17 +22,23 @@ Today we use the *GitHub Flow*.
 
 We aim to switch to using a *lightweight* version of the *Git Flow* instead for the feature, integration and release process.
 
-We made several adjustments to the original Git Flow:
+> [!INFO]
+> We made several adjustments to the original Git Flow:
+>
+> - We use `dev` instead of `develop` as the integration branch.
+> - We do **not** use *release* nor *hotfix* branches.
 
-- We use `dev` instead of `develop` as the integration branch.
-- We do **not** use *release* nor *hotfix* branches.
-
-- **`dev`** is a branch where developers share common code.
-- **`feature/xxx`**  A developer create a **feature branch** forked off `dev`, such as `feature/add-new-zealand`, (use a dash sign (`-`) in between words), then add commits to it.  
-  Once this feature branch is ready to be shared with others, he/she merge it into `dev`.
+Here are the main branches and what we use them for.
+- **`dev`** is a branch where developers share common code. We use it for integration testing.
 - **`main`** should contain the production ready code, tht is the stable version of our website.  
   We configured the repository to deploy the `main` branch automatically to GitHub web servers with *GitHub Pages*, each time the `main` branch is pushed to GitHub.
 
+We use a **feature branch** such as `feature/add-new-zealand` to add a new feature.  
+- A developer create **feature branch** forked off `dev`, (use a dash sign (`-`) in between words), then they add commits to it.  
+- Once this feature branch is ready to be shared with others, they merge the feature branch into `dev`.
+- Then they tests  `dev` if the integration and once it is considered stable merge `dev` into the `main` branch.
+
+To fix a bug/issue we create a `fix/xxx` branch forked-off `dev`, such as `fix/bali`. Once ready we merge this fix branch into `dev`.
 
 ```mermaid
 %%{init: {
