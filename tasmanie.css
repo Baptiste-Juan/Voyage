@@ -39,6 +39,8 @@ section {
     color: #ffffff;
     box-shadow: none;
     border-radius: 0;
+    position: relative;
+    overflow: hidden;
 }
 
 #ban h1 {
@@ -55,6 +57,24 @@ section {
 #ban p {
     font-size: 1.5rem;
     opacity: 0.9;
+}
+
+.btn-accueil {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #005a31;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    z-index: 100;
+}
+
+.btn-accueil:hover {
+    background-color: #004d2a;
 }
 
 /* --- MISE EN PAGE FLEXBOX --- */
